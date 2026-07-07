@@ -117,7 +117,52 @@ DOCTYPE html>
             </div>
         </div>
     </section>
+    <!-- --- Portfolio Samples Section --- -->
+    <section id="work" style="background-color: #f1f5f9;">
+        <div class="container">
+            <h2 class="section-title">Featured Work</h2>
+            
+            <div class="portfolio-grid">
+                
+                <!-- CARD 1: GREENNEST (Entire Card is Clickable) -->
+                <a href="greennest-sample.html" class="portfolio-card">
+                    <div class="card-img-wrapper">
+                        <!-- Make sure greennest-thumbnail.png is saved in your root directory -->
+                        <img src="greennest-thumbnail.png" alt="GreenNest Copywriting Sample">
+                    </div>
+                    <div class="card-content">
+                        <div>
+                            <span class="card-category">Landing Page Copy</span>
+                            <h3>GreenNest Sustainability Copy</h3>
+                            <p>An e-commerce landing page layout focused on clear value propositions, eco-friendly messaging, and high-converting Call-to-Actions (CTAs).</p>
+                        </div>
+                        <div class="card-btn">
+                            Read Copy Sample <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </div>
+                    </div>
+                </a>
 
+                <!-- CARD 2: PLACEHOLDER FOR NEXT PROJECT -->
+                <a href="#" class="portfolio-card" style="opacity: 0.85;">
+                    <div class="card-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: #e2e8f0; color: #64748b; font-weight: 600;">
+                        Project Coming Soon
+                    </div>
+                    <div class="card-content">
+                        <div>
+                            <span class="card-category" style="color: #64748b;">SEO Blog Post</span>
+                            <h3>Future Copywriting Project</h3>
+                            <p>An optimized piece targeting industry keywords to increase search engine authority, reader dwell time, and lead engagement statistics.</p>
+                        </div>
+                        <div class="card-btn" style="color: #64748b;">
+                            Coming Soon <i data-lucide="lock" style="width: 16px; height: 16px;"></i>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
