@@ -40,5 +40,4 @@ I am always open to discussing new writing projects, freelance opportunities, or
 *   **Instagram:** [https://www.instagram.com/writewithbasirat?igsh=Y3hybGVleDN5Z2tq]
 
 ---
-*Built with care. © 2026 Basirat Temitayo. All rights reserved.*
-
+*Built with care. © 2026 Basirat Temitayo. All rights reserved.
