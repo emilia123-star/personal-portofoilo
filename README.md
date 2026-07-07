@@ -1,198 +1,44 @@
-DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basirat Portfolio | Home</title>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        /* --- Reset & Global Styles --- */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
-        a { text-decoration: none; color: inherit; }
-        li { list-style: none; }
-        .container { width: 85%; max-width: 1100px; margin: 0 auto; }
+Basirat Temitayo | SEO Copywriter & Content Writer
 
-        /* --- Header Navigation --- */
-        header { background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
-        .logo { font-size: 22px; font-weight: 700; color: #2563eb; }
-        .nav-links { display: flex; gap: 30px; }
-        .nav-links a { font-weight: 500; color: #475569; transition: color 0.2s; }
-        .nav-links a:hover { color: #2563eb; }
+Welcome to my professional portfolio repository! This is a clean, responsive web space showcasing my skills, experience, and value as an SEO copywriter and content writer based in Lagos, Nigeria.
 
-        /* --- Hero Section --- */
-        #hero { min-height: 90vh; display: flex; align-items: center; background: radial-gradient(circle at top right, #eff6ff 0%, #f8fafc 100%); padding-top: 100px; }
-        .hero-content { max-width: 650px; }
-        .hero-content h1 { font-size: 44px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; color: #0f172a; }
-        .hero-content h1 span { color: #2563eb; }
-        .hero-content p { font-size: 18px; color: #475569; margin-bottom: 35px; }
-        
-        .btn { display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 28px; border-radius: 6px; font-weight: 600; transition: all 0.2s; }
-        .btn:hover { background-color: #1d4ed8; transform: translateY(-1px); }
+✨ **Live Demo:** [https://emilia123-star.github.io/personal-portofoilo]
 
-        /* --- About Section --- */
-        section { padding: 100px 0; }
-        .section-title { font-size: 28px; font-weight: 700; margin-bottom: 40px; color: #0f172a; position: relative; }
-        .section-title::after { content: ''; display: block; width: 40px; height: 4px; background-color: #2563eb; margin-top: 8px; border-radius: 2px; }
-        .about-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; }
-        .about-text p { margin-bottom: 20px; color: #334155; font-size: 16px; }
-        
-        .skills-grid { background: #ffffff; padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; }
-        .skills-grid h3 { font-size: 18px; margin-bottom: 20px; color: #0f172a; }
-        .tag-container { display: flex; flex-wrap: wrap; gap: 10px; }
-        .tag { background-color: #f1f5f9; color: #334155; padding: 6px 14px; border-radius: 20px; font-size: 14px; font-weight: 500; }
 
-        /* --- Footer --- */
-        footer { background-color: #0f172a; color: #94a3b8; padding: 50px 0; text-align: center; font-size: 14px; }
-        .social-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; }
-        .social-icon { background-color: #1e293b; color: #94a3b8; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
-        .social-icon:hover { background-color: #2563eb; color: #ffffff; transform: translateY(-3px); }
-        .social-icon i { width: 20px; height: 20px; }
-        
-        /* --- Clickable Portfolio Grid --- */
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 20px; }
-        .portfolio-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 12px 20px rgba(0,0,0,0.08); border-color: #2563eb; }
-        .card-img-wrapper { width: 100%; height: 220px; overflow: hidden; background-color: #f1f5f9; border-bottom: 1px solid #e2e8f0; }
-        .card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-        .card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .card-category { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #2563eb; font-weight: 700; margin-bottom: 8px; display: block; }
-        .card-content h3 { color: #0f172a; margin-bottom: 12px; font-size: 20px; font-weight: 700; }
-        .card-content p { color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 25px; }
-        .card-btn { display: inline-flex; align-items: center; color: #2563eb; font-weight: 600; font-size: 15px; gap: 5px; }
-        .portfolio-card:hover .card-btn { color: #1d4ed8; }
+---
 
-        @media (max-width: 768px) {        
-        
-            .about-layout { grid-template-columns: 1fr; gap: 40px; }
-            .hero-content h1 { font-size: 34px; }
-        }
-    </style>
-</head>
-<body>
+## ✒️ About Me
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Basirat Portfolio</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+I create clear, engaging, and search-friendly content that helps businesses connect with their target audience, improve online visibility, and achieve their marketing goals. I specialize in transforming complex ideas into compelling blog posts, website copy, product descriptions, and persuasive marketing content. Every piece I write places a strong emphasis on in-depth research, optimal readability, and SEO best practices.
 
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Crafting high-impact content that <span>ranks and converts</span>.</h1>
-                <p>Hi there! I'm Basirat Temitayo, a Lagos-based SEO copywriter. I build clear, search-optimized copy that amplifies brand visibility and engages global audiences.</p>
-                <a href="portfolio.html" class="btn">Explore My Portfolio</a>
-            </div>
-        </div>
-    </section>
+## 🛠️ Core Skills & Expertise
 
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-layout">
-                <div class="about-text">
-                    <p>Hello! I'm Basirat Temitayo, an SEO copywriter and content writer based in Lagos, Nigeria. I create clear, engaging, and search-friendly content that helps businesses connect with their audience, improve online visibility, and achieve their goals.</p>
-                    <p>I enjoy transforming ideas into compelling blog posts, website copy, product descriptions, and marketing content that is both informative and persuasive.</p>
-                </div>
-                
-                <div class="skills-grid">
-                    <h3>Core Skills & Tools</h3>
-                    <div class="tag-container">
-                        <span class="tag">SEO Writing</span>
-                        <span class="tag">Copywriting</span>
-                        <span class="tag">Blog Writing</span>
-                        <span class="tag">Website Content</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- --- Portfolio Samples Section --- -->
-    <section id="work" style="background-color: #f1f5f9;">
-        <div class="container">
-            <h2 class="section-title">Featured Work</h2>
-            
-            <div class="portfolio-grid">
-                
-                <!-- CARD 1: GREENNEST (Entire Card is Clickable) -->
-                <a href="greennest-sample.html" class="portfolio-card">
-                    <div class="card-img-wrapper">
-                        <!-- Make sure greennest-thumbnail.png is saved in your root directory -->
-                        <img src="greennest-thumbnail.png" alt="GreenNest Copywriting Sample">
-                    </div>
-                    <div class="card-content">
-                        <div>
-                            <span class="card-category">Landing Page Copy</span>
-                            <h3>GreenNest Sustainability Copy</h3>
-                            <p>An e-commerce landing page layout focused on clear value propositions, eco-friendly messaging, and high-converting Call-to-Actions (CTAs).</p>
-                        </div>
-                        <div class="card-btn">
-                            Read Copy Sample <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
-                        </div>
-                    </div>
-                </a>
+*   **SEO Writing** (Search engine optimization & structuring)
+*   **Copywriting** (High-converting landing pages & marketing copy)
+*   **Content Creation** (Blog posts & engaging articles)
+*   **Website Content** (Brand stories, About pages, & service pages)
+*   **Product Descriptions** (E-commerce optimized copy)
+*   **Keyword Research & Content Strategy**
+*   **Proofreading & Professional Editing**
+---
 
-                <!-- CARD 2: PLACEHOLDER FOR NEXT PROJECT -->
-                <a href="#" class="portfolio-card" style="opacity: 0.85;">
-                    <div class="card-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: #e2e8f0; color: #64748b; font-weight: 600;">
-                        Project Coming Soon
-                    </div>
-                    <div class="card-content">
-                        <div>
-                            <span class="card-category" style="color: #64748b;">SEO Blog Post</span>
-                            <h3>Future Copywriting Project</h3>
-                            <p>An optimized piece targeting industry keywords to increase search engine authority, reader dwell time, and lead engagement statistics.</p>
-                        </div>
-                        <div class="card-btn" style="color: #64748b;">
-                            Coming Soon <i data-lucide="lock" style="width: 16px; height: 16px;"></i>
-                        </div>
-                    </div>
-                </a>
+## 💻 Tech Stack Used
 
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-box" style="max-width: 550px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid #e2e8f0; border-radius: 12px;">
-                <form action="#" method="POST">
-                    <div style="margin-bottom: 20px;">
-                        <label style="display:block; margin-bottom:6px;">Your Name</label>
-                        <input type="text" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;" required>
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <label style="display:block; margin-bottom:6px;">Email Address</label>
-                        <input type="email" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;" required>
-                    </div>
-                    <button type="submit" class="btn" style="border: none; width: 100%; cursor: pointer;">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+This web portfolio was built from scratch focusing on clean structural semantics and fluid layout design:
+*   **HTML5** - Document semantic structure
+*   **CSS3** - Custom responsive typography, grid layouts, and clean animations
+*   **JavaScript** - Lightweight interaction (Lucide icons integration)
 
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/basirat-temitayo-931093420" class="social-icon" target="_blank"><i data-lucide="linkedin"></i></a>
-                <a href="https://www.instagram.com/writewithbasirat?igsh=Y3hybGVleDN5Z2tq" class="social-icon" target="_blank"><i data-lucide="instagram"></i></a>
-                <a href="mailto:writewithbasirat@gmail.com" class="social-icon" target="_blank"><i data-lucide="mail"></i></a>
-            </div>
-            <p>&copy; 2026 Basirat Portfolio. All rights reserved.</p>
-        </div>
-    </footer>
+---
 
-    <script>lucide.createIcons();</script>
-</body>
-</html>
+## 🤝 Let's Connect!
+
+I am always open to discussing new writing projects, freelance opportunities, or long-term brand collaborations. 
+
+*   **Email:** [writewithbasirat@gmail.com]
+*   **LinkedIn:** [https://www.linkedin.com/in/basirat-temitayo-931093420]
+*   **Instagram:** [https://www.instagram.com/writewithbasirat?igsh=Y3hybGVleDN5Z2tq]
+
+---
+*Built with care. © 2026 Basirat Temitayo. All rights reserved.*
+
